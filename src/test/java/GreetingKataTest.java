@@ -18,4 +18,9 @@ class GreetingKataTest {
     public void testGreet(){
         assertEquals("Hello, xs",GreetingKata.greeting("xs"));
     }
+
+    @Test
+    public void testGreetNull(){
+        assertEquals("Hello, my friend",GreetingKata.greeting(null));
+    }
 }
