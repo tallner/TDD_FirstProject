@@ -33,4 +33,9 @@ class GreetingKataTest {
     public void testGreetTwoNames(){
         assertEquals("Hello Jill and Jane.",GreetingKata.greeting(new String[]{"Jill","Jane"}));
     }
+
+    @Test
+    public void testGreetMultipleNames(){
+        assertEquals("Hello Amy, Brian and Charlotte.",GreetingKata.greeting(new String[]{"Amy", "Brian", "Charlotte"}));
+    }
 }

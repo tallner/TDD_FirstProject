@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Locale;
 
 public class GreetingKata {
@@ -25,11 +26,10 @@ public class GreetingKata {
 
         else
         {
-            String returnMsg="";
-            for (String item:names) {
-                returnMsg += item + ", ";
-            }
-            System.out.println(returnMsg);
+            String returnMsg = String.join(", ",names);
+
+            returnMsg = returnMsg.replaceAll("(.*), (.*)", "$1 and $2.");
+
             return "Hello " + returnMsg;
         }
 
