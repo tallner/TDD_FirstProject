@@ -16,7 +16,7 @@ class GreetingKataTest {
 
     @Test
     public void testGreet(){
-        assertEquals("Hello, xs",GreetingKata.greeting("xs"));
+        assertEquals("Hello, xs",GreetingKata.greeting(new String[]{"xs"}));
     }
 
     @Test
@@ -26,6 +26,11 @@ class GreetingKataTest {
 
     @Test
     public void testGreetShouting(){
-        assertEquals("HELLO JERRY!",GreetingKata.greeting("JERRY"));
+        assertEquals("HELLO JERRY!",GreetingKata.greeting(new String[]{"JERRY"}));
+    }
+
+    @Test
+    public void testGreetTwoNames(){
+        assertEquals("Hello Jill and Jane.",GreetingKata.greeting(new String[]{"Jill","Jane"}));
     }
 }
